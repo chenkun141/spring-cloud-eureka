@@ -1,27 +1,26 @@
-#  ÉèÖÃ·şÎñÃû
 spring:
   application:
     name: client2Service
-#  ÉèÖÃ×¢²áÖĞĞÄµØÖ·
+#æœåŠ¡æ³¨å†Œä¸­å¿ƒå®ä¾‹çš„ä¸»æœºå
 eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:8090/eureka
 server:
  port: 8199
-#feignÔ¶³Ìµ÷ÓÃÅäÖÃ
+
 feign:
   hystrix:
-    #¿ªÆôÈÛ¶Ï
+    #å¼€å¯ç†”æ–­
     enabled: true
-# ÈÛ¶Ï²ßÂÔ
+#ç†”æ–­ç­–ç•¥
 hystrix:
   command:
     default:
       execution:
         isolation:
           strategy: SEMAPHORE
-#ÈÛ¶Ï¼à¿ØÒÇ±í°å²é¿´µØÖ·  http://host:port/actuator/hystrix.stream
+#ç†”æ–­ç›‘æ§ä»ªè¡¨æ¿æŸ¥çœ‹åœ°å€  http://host:port/actuator/hystrix.stream
 management:
   endpoints:
     web:
