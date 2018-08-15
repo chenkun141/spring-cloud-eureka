@@ -1,0 +1,12 @@
+#  设置服务名
+spring:
+  application:
+    name: client1Service
+#  设置注册中心地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8090/eureka
+
+server:
+ port: 8099
