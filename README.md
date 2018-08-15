@@ -230,6 +230,10 @@ Eureka Server源码分析:[https://www.jianshu.com/p/2fc7cf7264ca](https://www.j
         <artifactId>hystrix-javanica</artifactId>
         <version>1.5.12</version>
     </dependency>
+	<dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
 
 在启动类加上@EnableHystrixDashboard注解,用于开启熔断监控仪表盘,加上注解@EnableCircuitBreaker,用于开启断路器
 
@@ -255,7 +259,8 @@ Eureka Server源码分析:[https://www.jianshu.com/p/2fc7cf7264ca](https://www.j
 	        include: hystrix.stream
 
 #### 访问熔断监控 ####
-通过地址http://host:port/hystrix访问熔断监控页面,在地址栏输入地址http://host:port/actuator/hystrix.stream,点击Monitor Stream即可访问监控页面.
+通过地址http://host:port/hystrix访问熔断监控页面,  
+在地址栏输入地址http://host:port/actuator/hystrix.stream,点击Monitor Stream即可访问监控页面.
 ![](https://i.imgur.com/8hRwJtt.png)
 监控页面显示服务访问情况
 ![](https://i.imgur.com/c7XykXd.png)
