@@ -1,8 +1,8 @@
-#  ÉèÖÃ·şÎñÃû
+#  è®¾ç½®æœåŠ¡å
 spring:
   application:
     name: client1Service
-#  ÉèÖÃ×¢²áÖĞĞÄµØÖ·
+#  è®¾ç½®æ³¨å†Œä¸­å¿ƒåœ°å€
 eureka:
   client:
     service-url:
